@@ -1,3 +1,15 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+add_document:
+    path: /api/add-document
+    controller: App\Controller\MongoController::addDocument
+get_document:
+    path: /api/get-document
+    controller: App\Controller\MongoController::getDocument
+get_lexical_data:
+    path: '/api/get-lexical-data/{idExercises}'
+    controller: 'App\Controller\LexicalController::getLexicalData'
+    methods: ['GET']
+    requirements:
+        idExercises: '\d+'
